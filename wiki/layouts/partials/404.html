@@ -1,0 +1,102 @@
+
+{{- define "main" }}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 5rem;
+            color: #ff5c8e;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .map-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .back-btn {
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 1rem;
+            color: #888;
+        }
+
+        .footer a {
+            color: #ff5c8e;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>404</h1>
+        <p>Oops! The page you're looking for could not be found.</p>
+        <img src="https://via.placeholder.com/800x400/cccccc/ffffff?text=Map+Image" alt="Map Not Found" class="map-image">
+        <p>Looks like you've taken a wrong turn. Let's get you back on track.</p>
+        <a href="/" class="back-btn">Go Back to Home</a>
+
+        <div class="footer">
+            <p>Or explore other parts of the <a href="/">Map</a>!</p>
+        </div>
+    </div>
+
+</body>
+</html>
+{{- end }}{{/* end main */ -}}

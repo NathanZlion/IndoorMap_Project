@@ -1,3 +1,84 @@
-baseURL = 
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Indoor Maps Wiki'
+theme = 'PaperMod'
+ShowToc = true
+
+[languages.en.pagination]
+    disableAliases = true
+    pagerSize = 10
+    path = 'page'
+
+[params]
+    defaultTheme = "light"
+    disableThemeToggle = true
+    showReadingTime = true
+    ShowBreadCrumbs = true
+    ShowShareButtons = true
+    ShowPostNavLinks = true
+    ShowCodeCopyButtons = true
+    author = ['Nathnael Dereje']
+    comments = true
+
+[params.header]
+    enable = false
+
+features = [
+  "menu-location-indicator",
+  "search"
+]
+
+[menu]
+  [[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+  [[menu.main]]
+  name = "Search"
+  url = "search"
+  weight = 2 
+
+  [[menu.main]]
+  name = "Demo"
+  url = "/demo/"
+  weight = 3
+
+  [[menu.main]]
+  name = "Demo"
+  url = "/demo/"
+  weight = 4
+
+
+[params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    limit = 10
+    keys = ["title", "permalink", "summary", "content"]
+
+[params.cover]
+    responsiveImages = true
+
+[params.homeInfoParams]
+    title = "Hi there 👋"
+    Content = "Welcome to my humble personal Project Indoor Maps"
+    image = "img/indoor logo.png"
+
+[[params.socialIcons]]
+name = "GitHub"
+url = "https://github.com/NathanZlion/IndoorMap_Project"
+
+[[params.socialIcons]]
+name = "Linkedin"
+url = "https://www.linkedin.com/in/nathnael-dereje/"
+
+[[params.socialIcons]]
+name = "Telegram"
+url = "https://t.me/Nathanzgreat"
+
+
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
